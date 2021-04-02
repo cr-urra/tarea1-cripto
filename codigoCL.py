@@ -1,0 +1,117 @@
+import selenium
+import time
+import pyautogui
+from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
+
+def signUp():
+    chrome_options = webdriver.ChromeOptions()
+    chrome_options.add_experimental_option("detach", True)
+    driver = webdriver.Chrome(options=chrome_options)
+    driver.get("https://www.buscalibre.cl/")
+    time.sleep(1)
+    driver.find_element_by_id("iniciarSesion").click()
+    time.sleep(1)
+    driver.find_element_by_id("signin_username").send_keys("251dd2dd8e@firemailbox.club")
+    time.sleep(1)
+    driver.find_element_by_id("submit_login").click()
+    time.sleep(1)
+    driver.find_element_by_id("signup_email_confirm").send_keys("251dd2dd8e@firemailbox.club")
+    driver.find_element_by_id("signup_nombre").send_keys("alanssss")
+    driver.find_element_by_id("signup_apellido").send_keys("britssoss")
+    driver.find_element_by_id("signup_clave").send_keys("nljk;wetpsiojwserasnkmgrsaohpi")
+    driver.find_element_by_id("signup_confirmar_clave").send_keys("nljk;wetpsiojwserasnkmgrsaohpi")
+    pyautogui.press("tab")
+    pyautogui.press("enter")    
+    time.sleep(3)
+    time.sleep(1)
+    print(pyautogui.size())
+    print(pyautogui.position())
+    time.sleep(5)
+    
+
+def signIn():
+    chrome_options = webdriver.ChromeOptions()
+    chrome_options.add_experimental_option("detach", True)
+    driver = webdriver.Chrome(options=chrome_options)
+    driver.get("https://www.buscalibre.cl/")
+    time.sleep(1)
+    driver.find_element_by_id("iniciarSesion").click()
+    time.sleep(1)
+    driver.find_element_by_id("signin_username").send_keys("4bd21a1b94@firemailbox.club")
+    time.sleep(1)
+    driver.find_element_by_id("submit_login").click()
+    time.sleep(1)
+    driver.find_element_by_id("signin_password").send_keys("nljk;wetpiojwerasnkmgrsaohpi")
+    driver.find_element_by_id("submit_login").click()
+    time.sleep(5)
+
+def restorePassword():
+    chrome_options = webdriver.ChromeOptions()
+    #chrome_options.add_experimental_option("detach", True)
+    driver = webdriver.Chrome(options=chrome_options)
+    driver.get("https://www.buscalibre.cl/")
+    time.sleep(1)
+    driver.find_element_by_id("iniciarSesion").click()
+    time.sleep(1)
+    driver.find_element_by_id("signin_username").send_keys("b8a6ee385e@firemailbox.club")
+    time.sleep(1)
+    driver.find_element_by_id("submit_login").click()
+    time.sleep(1)
+    driver.find_element_by_id("recuperar").click()
+    time.sleep(5)
+
+def changePassword():
+    chrome_options = webdriver.ChromeOptions()
+    chrome_options.add_experimental_option("detach", True)
+    driver = webdriver.Chrome(options=chrome_options)
+    driver.get("https://www.buscalibre.cl/")
+    time.sleep(1)
+    driver.find_element_by_id("iniciarSesion").click()
+    time.sleep(1)
+    driver.find_element_by_id("signin_username").send_keys("4bd21a1b94@firemailbox.club")
+    time.sleep(1)
+    driver.find_element_by_id("submit_login").click()
+    time.sleep(1)
+    driver.find_element_by_id("signin_password").send_keys("nljk;wetpiojwerasnkmgrsaohpi")
+    time.sleep(1)
+    driver.find_element_by_id("submit_login").click()
+    time.sleep(1)
+    driver.find_element_by_id("iniciarSesion").click()
+    time.sleep(1)
+    for i in range(0,20):
+        i += i
+        pyautogui.press("tab")
+    pyautogui.press("enter")
+    time.sleep(1)
+    for i in range(0,7):
+        i += i
+        pyautogui.press("tab")
+    pyautogui.write("nljk;wetpiojwerasnkmgrsaohpi")
+    pyautogui.press("tab")
+    pyautogui.write("nljk;wetpiojwerasnkmgrsaohpi1")
+    pyautogui.press("tab")
+    pyautogui.write("nljk;wetpiojwerasnkmgrsaohpi1")
+    pyautogui.press("tab")
+    pyautogui.press("enter")
+    print(pyautogui.position())
+
+def force():
+    chrome_options = webdriver.ChromeOptions()
+    chrome_options.add_experimental_option("detach", True)
+    driver = webdriver.Chrome(options=chrome_options)
+    driver.get("https://www.buscalibre.cl/")
+    time.sleep(1)
+    driver.find_element_by_id("iniciarSesion").click()
+    time.sleep(1)
+    driver.find_element_by_id("signin_username").send_keys("4bd21a1b94@firemailbox.club")
+    time.sleep(1)
+    driver.find_element_by_id("submit_login").click()
+    time.sleep(1)
+    for i in range(0,100):
+        time.sleep(1)
+        driver.find_element_by_id("signin_password").send_keys("nljk;wetpiojwerasnkmgrsaohpi1")
+        driver.find_element_by_id("submit_login").click()
+    time.sleep(5)
+
+signIn()
